@@ -2139,6 +2139,7 @@ function M.Parser()
 		return self:gen_template_typedef_auto(ttype,te,newte)
 	end
 	function par:gen_template_typedef_auto(ttype,te,newte)
+		print("gentemplatetypedef",ttype,te,newte)
 		assert(self.templated_structs[ttype],ttype)
 		local defi = self.templated_structs[ttype]
 		local Targ = strsplit(self.typenames[ttype],",")

@@ -21,8 +21,8 @@ file(GLOB IMGUI_SOURCES
 	${TABLES_SOURCE}
 )
 
-set(IMGUI_STATIC "no" CACHE STRING "Build as a static library")
-set(IMGUI_FREETYPE "no" CACHE STRING "Build with freetype library")
+set(IMGUI_STATIC ON CACHE STRING "Build as a static library")
+set(IMGUI_FREETYPE OFF CACHE STRING "Build with freetype library")
 set(IMGUI_LIBRARIES )
 
 if(IMGUI_FREETYPE)
@@ -51,6 +51,7 @@ target_include_directories(cimgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(cimgui PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/imgui)
 set_target_properties(cimgui PROPERTIES PREFIX "")
 target_link_libraries(cimgui ${IMGUI_LIBRARIES})
+set_property(TARGET cimgui PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 #install
 install(TARGETS cimgui
