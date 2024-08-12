@@ -1513,7 +1513,7 @@
   ],
   "ImDrawList_AddConvexPolyFilledMultiColor": [
     {
-      "args": "(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,bool xgrad,bool ygrad)",
+      "args": "(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,ImU32 col2,ImU32 col3)",
       "argsT": [
         {
           "name": "self",
@@ -1536,23 +1536,23 @@
           "type": "ImU32"
         },
         {
-          "name": "xgrad",
-          "type": "bool"
+          "name": "col2",
+          "type": "ImU32"
         },
         {
-          "name": "ygrad",
-          "type": "bool"
+          "name": "col3",
+          "type": "ImU32"
         }
       ],
-      "argsoriginal": "(const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,bool xgrad,bool ygrad)",
-      "call_args": "(points,num_points,col0,col1,xgrad,ygrad)",
+      "argsoriginal": "(const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,ImU32 col2,ImU32 col3)",
+      "call_args": "(points,num_points,col0,col1,col2,col3)",
       "cimguiname": "ImDrawList_AddConvexPolyFilledMultiColor",
       "defaults": {},
       "funcname": "AddConvexPolyFilledMultiColor",
       "location": "imgui:3203",
       "ov_cimguiname": "ImDrawList_AddConvexPolyFilledMultiColor",
       "ret": "void",
-      "signature": "(const ImVec2*,int,ImU32,ImU32,bool,bool)",
+      "signature": "(const ImVec2*,int,ImU32,ImU32,ImU32,ImU32)",
       "stname": "ImDrawList"
     }
   ],

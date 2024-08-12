@@ -2311,9 +2311,9 @@ CIMGUI_API void ImDrawList_AddConvexPolyFilled(ImDrawList* self,const ImVec2* po
 {
     return self->AddConvexPolyFilled(points,num_points,col);
 }
-CIMGUI_API void ImDrawList_AddConvexPolyFilledMultiColor(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,bool xgrad,bool ygrad)
+CIMGUI_API void ImDrawList_AddConvexPolyFilledMultiColor(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,ImU32 col2,ImU32 col3)
 {
-    return self->AddConvexPolyFilledMultiColor(points,num_points,col0,col1,xgrad,ygrad);
+    return self->AddConvexPolyFilledMultiColor(points,num_points,col0,col1,col2,col3);
 }
 CIMGUI_API void ImDrawList_AddConcavePolyFilled(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col)
 {
