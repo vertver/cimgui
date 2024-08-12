@@ -182,6 +182,7 @@ typedef int ImGuiMouseCursor;
 typedef int ImGuiStyleVar;
 typedef int ImGuiTableBgTarget;
 typedef int ImDrawFlags;
+typedef int ImDrawBlendMode;
 typedef int ImDrawListFlags;
 typedef int ImFontAtlasFlags;
 typedef int ImGuiBackendFlags;
@@ -1341,6 +1342,13 @@ typedef enum {
     ImDrawListFlags_AntiAliasedFill         = 1 << 2,
     ImDrawListFlags_AllowVtxOffset          = 1 << 3,
 }ImDrawListFlags_;
+typedef enum {
+    ImDrawBlendMode_Average,
+    ImDrawBlendMode_Additive,
+    ImDrawBlendMode_Subtractive,
+    ImDrawBlendMode_EqualFirst,
+    ImDrawBlendMode_EqualSecond,
+}ImDrawBlendMode_;
 typedef struct ImVector_ImDrawVert {int Size;int Capacity;ImDrawVert* Data;} ImVector_ImDrawVert;
 
 typedef struct ImVector_ImVec2 {int Size;int Capacity;ImVec2* Data;} ImVector_ImVec2;
@@ -4119,7 +4127,7 @@ CIMGUI_API void ImDrawList_AddBezierCubic(ImDrawList* self,const ImVec2 p1,const
 CIMGUI_API void ImDrawList_AddBezierQuadratic(ImDrawList* self,const ImVec2 p1,const ImVec2 p2,const ImVec2 p3,ImU32 col,float thickness,int num_segments);
 CIMGUI_API void ImDrawList_AddPolyline(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col,ImDrawFlags flags,float thickness);
 CIMGUI_API void ImDrawList_AddConvexPolyFilled(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col);
-CIMGUI_API void ImDrawList_AddConvexPolyFilledMultiColor(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,ImU32 col2,ImU32 col3);
+CIMGUI_API void ImDrawList_AddConvexPolyFilledMultiColor(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col0,ImU32 col1,ImU32 col2,ImU32 col3,ImDrawBlendMode blending);
 CIMGUI_API void ImDrawList_AddConcavePolyFilled(ImDrawList* self,const ImVec2* points,int num_points,ImU32 col);
 CIMGUI_API void ImDrawList_AddImage(ImDrawList* self,ImTextureID user_texture_id,const ImVec2 p_min,const ImVec2 p_max,const ImVec2 uv_min,const ImVec2 uv_max,ImU32 col);
 CIMGUI_API void ImDrawList_AddImageQuad(ImDrawList* self,ImTextureID user_texture_id,const ImVec2 p1,const ImVec2 p2,const ImVec2 p3,const ImVec2 p4,const ImVec2 uv1,const ImVec2 uv2,const ImVec2 uv3,const ImVec2 uv4,ImU32 col);

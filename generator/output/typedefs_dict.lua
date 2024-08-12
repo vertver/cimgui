@@ -3,6 +3,7 @@ defs["ImBitArrayForNamedKeys"] = "ImBitArray<ImGuiKey_NamedKey_COUNT,-ImGuiKey_N
 defs["ImBitArrayPtr"] = "ImU32*"
 defs["ImBitVector"] = "struct ImBitVector"
 defs["ImColor"] = "struct ImColor"
+defs["ImDrawBlendMode"] = "int"
 defs["ImDrawCallback"] = "void(*)(const ImDrawList* parent_list,const ImDrawCmd* cmd);"
 defs["ImDrawChannel"] = "struct ImDrawChannel"
 defs["ImDrawCmd"] = "struct ImDrawCmd"

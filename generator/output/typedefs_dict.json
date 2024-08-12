@@ -3,6 +3,7 @@
   "ImBitArrayPtr": "ImU32*",
   "ImBitVector": "struct ImBitVector",
   "ImColor": "struct ImColor",
+  "ImDrawBlendMode": "int",
   "ImDrawCallback": "void(*)(const ImDrawList* parent_list,const ImDrawCmd* cmd);",
   "ImDrawChannel": "struct ImDrawChannel",
   "ImDrawCmd": "struct ImDrawCmd",
