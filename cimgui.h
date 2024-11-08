@@ -11,7 +11,7 @@
     #ifdef CIMGUI_NO_EXPORT
         #define API
     #else
-        #define API __declspec(dllexport)
+        #define API
     #endif
 #else
     #ifdef __GNUC__

@@ -3,7 +3,6 @@
 //with imgui_internal.h api
 //with imgui_freetype.h api
 //docking branch
-
 #include "./imgui/imgui.h"
 #ifdef IMGUI_ENABLE_FREETYPE
 #include "./imgui/misc/freetype/imgui_freetype.h"
